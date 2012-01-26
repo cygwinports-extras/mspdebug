@@ -1,0 +1,14 @@
+TOOLCHAIN_TARGET="msp430"
+inherit toolchain
+
+DESCRIPTION="Debugger for MSP430 MCUs"
+HOMEPAGE="http://mspdebug.sourceforge.net/"
+SRC_URI="mirror://sourceforge/mspdebug/${P}.tar.gz"
+
+MAKEOPTS+=" PREFIX=/usr"
+
+src_compile() {
+	cd ${B}
+	lndirs
+	cygmake OS=Cygwin
+}
