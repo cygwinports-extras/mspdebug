@@ -2,7 +2,7 @@ TOOLCHAIN_TARGET="msp430"
 inherit toolchain
 
 NAME="mspdebug"
-VERSION=0.19
+VERSION=0.22
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="MSP430 debugger"
