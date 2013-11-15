@@ -1,0 +1,23 @@
+TOOLCHAIN_TARGET="msp430"
+inherit toolchain
+
+NAME="mspdebug"
+VERSION=0.19
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="MSP430 debugger"
+DESCRIPTION="MSPDebug is a free debugger for use with MSP430 MCUs. It supports
+FET430UIF, eZ430, RF2500, Launchpad and Olimex MSP-JTAG-TINY programmers. It
+can be used as a proxy for gdb or as an independent debugger with support for
+programming, disassembly and reverse engineering."
+REQUIRES="msp430-gdb"
+HOMEPAGE="http://mspdebug.sourceforge.net/"
+SRC_URI="mirror://sourceforge/mspdebug/${NAME}-${VERSION}.tar.gz"
+
+MAKEOPTS+=" PREFIX=/usr"
+
+src_compile() {
+	cd ${B}
+	lndirs
+	cygmake OS=Cygwin
+}

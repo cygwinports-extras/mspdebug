@@ -1,8 +1,0 @@
-category: Devel
-requires: libreadline7 libusb0.1_4 msp430-gdb
-sdesc: "MSP430 debugger"
-ldesc: "MSPDebug is a free debugger for use with MSP430 MCUs. It 
-supports FET430UIF, eZ430, RF2500, Launchpad and Olimex MSP-JTAG-TINY 
-programmers. It can be used as a proxy for gdb or as an independent 
-debugger with support for programming, disassembly and reverse 
-engineering."
